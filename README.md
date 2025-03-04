@@ -11,14 +11,9 @@ Traversal is the process of moving through an array with a specific purpose, suc
 ## 1. Contains Duplicates
 
 ### Purpose
-This program checks if an array contains any duplicate elements.
+This method checks if any element appears more than once in the array.
 
 ### Key Method: `containsDuplicates()`
-- Uses nested loops to compare each element with subsequent elements
-- Returns `true` if a duplicate is found
-- Returns `false` if no duplicates exist
-
-### Code Breakdown
 ```java
 public static boolean containsDuplicates(int[] array) {
     // Outer loop: pick each element one by one
@@ -36,9 +31,24 @@ public static boolean containsDuplicates(int[] array) {
 }
 ```
 
+### Method Details
+- Uses nested loops to compare each element with subsequent elements
+- Returns `true` if a duplicate is found
+- Returns `false` if no duplicates exist
+- Compares each element with elements that come after it
+- Stops and returns immediately when a duplicate is found
+
 ### Test Cases
-- `numbers1 = {1, 2, 3, 4, 5}` - No duplicates
-- `numbers2 = {1, 2, 3, 2, 5}` - Contains a duplicate (2)
+```java
+// Example array with no duplicates
+int[] numbers1 = {1, 2, 3, 4, 5};
+// Example array with a duplicate (2 appears twice)
+int[] numbers2 = {1, 2, 3, 2, 5};
+
+// Test cases for both arrays
+System.out.println("Array 1 has duplicates: " + containsDuplicates(numbers1)); // false
+System.out.println("Array 2 has duplicates: " + containsDuplicates(numbers2)); // true
+```
 
 ## 2. Array Iteration and Traversal
 
@@ -52,11 +62,13 @@ Demonstrates two fundamental array operations:
 // Create an array with numbers in the range [100, 1000]
 int[] numbers = {100, 250, 400, 750, 1000};
 
+System.out.println("Array Iteration:");
 // Iteration: To go through each element in the array and print it
 for (int i = 0; i < numbers.length; i++) {
     System.out.println("Element at index " + i + ": " + numbers[i]);
 }
 
+System.out.println("\nArray Traversal:");
 // Traversal: To search for a specific value in the array by comparing it to each element in the array until found
 int searchValue = 400; // Value to find
 int foundIndex = -1;  // Stores index if found
