@@ -71,7 +71,7 @@ for (int i = 0; i < numbers.length; i++) {
 System.out.println("\nArray Traversal:");
 // Traversal: To search for a specific value in the array by comparing it to each element in the array until found
 int searchValue = 400; // Value to find
-int foundIndex = -1;  // Stores index if found
+int foundIndex = -1;  // Stores the index of searchValue if found; remains -1 if not found
 
 for (int i = 0; i < numbers.length; i++) {
     if (numbers[i] == searchValue) {
